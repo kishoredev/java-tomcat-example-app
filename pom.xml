@@ -42,7 +42,17 @@
         <version>${tomcat.version}</version>
     </dependency>
   </dependencies>
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>corp1</id>
+            <name>Corporate Repository</name>
+            <url>scp://repo/maven2</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
   <build>
+
     <finalName>embeddedTomcatSample</finalName>
     <plugins>
         <plugin>
@@ -91,6 +101,8 @@
                 </execution>
             </executions>
         </plugin>
+
     </plugins>
+
   </build>
 </project>
